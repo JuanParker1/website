@@ -130,7 +130,7 @@
   <div class="section card-body mb-0 my-2">
     <div class="paragraph card-text card-stanza my-5 text-center">Now let me give you a more involved example,<br>I would like to show you how to download internet stories.</div>
     <div class="paragraph card-text card-stanza my-5 text-center">Every website offers some way of getting some of their data,<br>Hacker News (a website for programmers) has a nice description of their raw data: <a href="https://github.com/HackerNews/API">https://github.com/HackerNews/API</a></div>
-    <div class="paragraph card-text card-stanza my-5 text-center">We learn that their website data structure is all about numbers,<br>and to get at those number we have to download their <a href="https://www.guyrutenberg.com/2014/05/02/make-offline-mirror-of-a-site-using-wget/">topstories.json</a></div>
+    <div class="paragraph card-text card-stanza my-5 text-center">We learn that their website data structure is all about numbers,<br>and to get at those number we have to download their <a href="https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty">topstories.json</a></div>
     <div class="paragraph card-text card-stanza my-5 text-center">JSON is a file format, it is not really purrfect for the command line,<br>so we will thin it, reduce it simplify with a program called <a href="https://stedolan.github.io/jq/">jq</a>,</div>
     <div class="paragraph card-text card-stanza my-5 text-center">jq reaches into the JSON file format and grabs plain text for us,<br>without the extra curly bracets, quotes, or in this case, commas that delimit the entries and square brackets that represent lists of data.</div>
     <div class="paragraph card-text card-stanza my-5 text-center">We will use <a href="https://www.youtube.com/watch?v=I6id1Y0YuNk">curl</a>, it is very similar to wget,<br>but it doesn't have that fancy extra stuff for mirroring websites.</div>
@@ -332,7 +332,7 @@
                  </li>
                
                  <li class="list-group-item bg-dark">
-                   <a href="https://www.guyrutenberg.com/2014/05/02/make-offline-mirror-of-a-site-using-wget/" class="text-muted text-decoration-none"><span class="text-secondary">5.</span> <span class="text-warning">topstories.json</span></a> <small class="text-muted">(www.guyrutenberg.com)</small>
+                   <a href="https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty" class="text-muted text-decoration-none"><span class="text-secondary">5.</span> <span class="text-warning">topstories.json</span></a> <small class="text-muted">(hacker-news.firebaseio.com)</small>
                  </li>
                
                  <li class="list-group-item bg-dark">
