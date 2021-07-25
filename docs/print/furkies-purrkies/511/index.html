@@ -180,7 +180,7 @@
 </div>
 <div class="section avoid-break-inside" style="padding-bottom: 2rem;">
   <div class="paragraph">Overall, our best option here, is to cut 10 entries from top of the Hacker News,<br>and see if we can get away with making 10 quick requests for their top stories, and call our initial version done.</div>
-  <div class="paragraph">Personally I would begin testing <span>Newsbeuter<sup>[19]</sup></span> <span>Snownews<sup>[20]</sup></span> <span>Newsroom<sup>[21]</sup></span> and <span>newsboat<sup>[22]</sup></span> to get the feel for command line news,<br><span>and consider moving to desktop RSS clients<sup>[23]</sup></span> so as long as they support ad blockers.</div>
+  <div class="paragraph">Personally I would begin testing <span>Newsbeuter<sup>[19]</sup></span> <span>Snownews<sup>[20]</sup></span> <span>Newsroom<sup>[21]</sup></span> and <span>newsboat<sup>[22]</sup></span> to get the feel for command line news,<br>and consider moving to desktop RSS clients so as long as they support ad blockers.</div>
   <div class="paragraph">And then quietly, I would begin working on my scrapers,<br>being mindful that they must output RSS feeds, which then I would add to my RSS readers.</div>
 </div>
 <div class="section avoid-break-inside" style="padding-bottom: 2rem;">
@@ -189,7 +189,7 @@
 <div class="section avoid-break-inside" style="padding-bottom: 2rem;">
   <div class="paragraph">To be honest, there is not much time that I have for reading internet news,<br>and the more I think about it, the more fetching that little 10 news items program seems, and the more clunky RSS starts to look.</div>
   <div class="paragraph">Let us chop off the top then entries from Hacker News,<br>and see if we can quickly get an overview of what is going on in the world.</div>
-  <div class="paragraph">The command for getting the top of data is head, and to specify how many lines we want we use -n,<br>so our command now looks like this: curl <span>https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty<sup>[24]</sup></span> | jq '.[]' | head -n 10;</div>
+  <div class="paragraph">The command for getting the top of data is head, and to specify how many lines we want we use -n,<br>so our command now looks like this: curl <span>https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty<sup>[23]</sup></span> | jq '.[]' | head -n 10;</div>
   <div class="paragraph">Armed with 10 numbers that represent top stories,<br>we now have to take the second step, and use each of those numbers to download the titles from Hacker News.</div>
   <div class="paragraph">And here we reuse curl, but the url that we give to curl needs to have that number inserted in there,<br>there are two ways to do this, one is xargs, and the other a while loop.</div>
   <div class="paragraph">The while loop is better, it is more readable, it is faster, but I don't like it because it wraps things,<br>my xargs approach, creates a single straight command line.</div>
@@ -235,8 +235,7 @@
   <div>[20]: https://github.com/msharov/snownews</div>
   <div>[21]: https://www.tecmint.com/newsroom-commandline-linux-news-reader/</div>
   <div>[22]: https://www.tecmint.com/newsboat-rss-atom-feed-reader-for-linux-terminals/</div>
-  <div>[23]: https://www.youtube.com/watch?v=FSn_38gDvzM</div>
-  <div>[24]: https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty</div>
+  <div>[23]: https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty</div>
 </div>
 
   </main>
