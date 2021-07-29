@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link media="print" rel="stylesheet" href="/print/gutenberg.css">
+  <link media="print" rel="stylesheet" href="/print/themes/modern.css"> <!-- optional -->
+  <style media="print">
+    /* fixes for the gutenberg.css */
+    body { text-align: initial; }
+    .title-page {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Programming A Remote Controlled Portable Raspberry Pi Audio Player</h1>
+
+    <div class="title-page break-after" style="padding-bottom: 5rem;">
+      
+      <img style="display: inline;" src="/image/md-poetry-0515-illustration.jpg" alt="Programming A Remote Controlled Portable Raspberry Pi Audio Player" title="Programming A Remote Controlled Portable Raspberry Pi Audio Player">
+      
+    </div>
+
+    <div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+      <div class="paragraph" style="font-weight: bold;">Programming A Remote Controlled Portable Raspberry Pi Audio Player</div>
+    </div>
+
+    <div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <div class="paragraph">I finally connected the little Bluetooth remote shutter,<br>to my heavy little mp3 player invention.</div>
+  <div class="paragraph">My 1998 design was a small mp3 decoder equpped Printed Circuit Board (PCB),<br>strapped onto a huge CD-ROM drive filled with a lot of MOD files converted to mp3.</div>
+  <div class="paragraph">It was meant for a car,<br>but also for learning.</div>
+  <div class="paragraph">Inventions are important things,<br>they help us dream and learn.</div>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <br>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <div class="paragraph">I took a computer hardware class,<br>but it was so simple that it was painful to see my time being wasted.</div>
+  <div class="paragraph">It was all good people, weird but OK,<br>it is that kind of simplified education that holds everyone back.</div>
+  <div class="paragraph">An you know it, everyone was just laid back,<br>the semester passed everyone got an A, and nobody learned a thing.</div>
+  <div class="paragraph">And there was no education to be had,<br>I had to hurry with my English.</div>
+  <div class="paragraph">I still had bunch of words to learn,<br>it was a high priority item for me, so I spent my teenage years reading paperbacks at Plymouth's Denny's.</div>
+  <div class="paragraph">Our education has to progress the way water moves through a piece of paper,<br>observe, how it starts as a dot, and then it spreads as far as it can see.</div>
+  <div class="paragraph">The more it knows the more it grows,<br>we must reject fake education, we mustn't tolerate it.</div>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <br>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <div class="paragraph">I had my little invention,<br>but I didn't have so much as an LED to make a <span>throwie<sup>[1]</sup></span>.</div>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <br>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <div class="paragraph">The player I made today, has a battery where the old CD-ROM was supposed to go,<br>and the PCB is now replaced with an actual GNU/Linux powered Computer.</div>
+  <div class="paragraph">I finished programming the shutter <span>thingie<sup>[2]</sup></span>,<br>but I didn't even try to figure out the buttons.</div>
+  <div class="paragraph">The thought hardly occurred to me,<br>the shutter has six buttons that trigger a lot of data.</div>
+  <div class="paragraph">I can see that a single button press triggers multiple <span>light pen actions<sup>[3]</sup></span>,<br>that is probably what the kernel calls a finger.</div>
+  <div class="paragraph">Left and right buttons tiger what maybe to be a swipe,<br>up and down, actually trigger many rows of data, as if counting from 0 to 100.</div>
+  <div class="paragraph">Holding down the Y-axis key, does something slightly different,<br>it slides values between 0 and possibly 1,000.</div>
+  <div class="paragraph">The values are always the same,<br>there is no continuation from where the button last left off.</div>
+  <div class="paragraph">So if I am always getting the same events,<br>I can just glue (concatenate) all the data and call it a single button.</div>
+  <div class="paragraph">The long press is a bit off, because the stream of data that long-press sends,<br>ends when a person lets go, it ends at an arbitrary location within that 1,000 virtual key presses.</div>
+  <div class="paragraph">It is really good for changing audio volume,<br>but I'll have to think about it some more.</div>
+  <div class="paragraph"><span>So the program I wrote, has a learn function that concatenates all button data into a single recognizable ID<sup>[4]</sup></span>,<br>and then when the program is in normal operation mode, it <span>monitors for the presence of the same flurry of key presses<sup>[5]</sup></span>.</div>
+  <div class="paragraph">When the stored and detected sequence matches,<br>it then <span>triggers a command that is manually associated with the ID<sup>[6]</sup></span>.</div>
+  <div class="paragraph">And the GNU/Linux commands it triggers are extremely simple,<br>the play button simply <span>stops<sup>[7]</sup></span> music if it is already playing and then <span>plays<sup>[8]</sup></span> songs from the Music folder, shuffling them first.</div>
+  <div class="paragraph">Pressing play, multiple times,<br>stops playing current song, and it picks a new one at random, it is surprisingly simple.</div>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <br>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <div class="paragraph">I had a fun time this Sunday learning how to manually connect a Bluetooth device,<br>it took me four hours because that litthe shutter button pad, demands that pairing the device and connecting the device, happens instantly.</div>
+  <div class="paragraph">I couldn't issue the commands manually, I only had hundreds of milliseconds to go from pair to connect,<br>so it needed to be scripted, the computer had to issue connect right after pairing.</div>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <br>
+</div>
+<div class="section avoid-break-inside" style="padding-bottom: 2rem;">
+  <div class="paragraph">This little $50 of $75 invention is extremely interesting,<br>even for people that like having closed source phones around.</div>
+  <div class="paragraph">Not only can you control everything from your phone,<br>but also proxy your phone traffic through <span>Pi-hole<sup>[9]</sup></span> a which greatly reduces spam and ads.</div>
+  <div class="paragraph">The openness of the Raspberry Pi and the underlying GNU/Linux,<br><span>allows for things that aren't possible with closed source phones<sup>[10]</sup></span>.</div>
+  <div class="paragraph">It is this kind of tinkering that makes learning GNU/Linux fun and painless,<br>it takes many years, but there is no hurry, in the end being able to reprogram things without investing too much time into custom PCBs is a fun talent to have.</div>
+  <div class="paragraph">I think my next project is going to be,<br>a Linux driven Boom Box.</div>
+</div>
+<div class="break-after">&nbsp;</div>
+<div>
+  <div class="section" style="padding-bottom: 1rem;">References</div>
+  <div>[1]: https://www.youtube.com/watch?v=hme5ladDQ_0</div>
+  <div>[2]: https://www.amazon.com/Cellphone-Shutter-Multifunction-Playback-Smartphones/dp/B08SWC2DQW</div>
+  <div>[3]: https://www.youtube.com/watch?v=EBfkiprmoi0</div>
+  <div>[4]: https://github.com/catpea/isir/blob/01ef4b7e55058fde70e5098aad8402345d7e113c/command/learn.js#L51</div>
+  <div>[5]: https://github.com/catpea/isir/blob/01ef4b7e55058fde70e5098aad8402345d7e113c/command/listen.js#L41</div>
+  <div>[6]: https://github.com/catpea/isir/blob/01ef4b7e55058fde70e5098aad8402345d7e113c/command/listen.js#L49</div>
+  <div>[7]: https://github.com/catpea/isir/blob/01ef4b7e55058fde70e5098aad8402345d7e113c/bin/p.sh#L2</div>
+  <div>[8]: https://github.com/catpea/isir/blob/01ef4b7e55058fde70e5098aad8402345d7e113c/bin/p.sh#L3</div>
+  <div>[9]: https://pi-hole.net/</div>
+  <div>[10]: https://www.youtube.com/watch?v=WDa_odxAGUU</div>
+</div>
+
+  </main>
+</body>
+</html>
