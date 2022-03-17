@@ -61,12 +61,12 @@
        <div class="col">
 
 
-         <a href="#alert" class="btn btn-outline-warning btn-sm position-relative">
+         <a href="#alert" class="btn btn-danger btn-sm position-relative">
            
-             <i class="bi bi-info-circle-fill"></i>  Possible Hosting Disruption Notice
+             <i class="bi bi-info-circle-fill"></i>  Whoo Hoo! Hosting Failure Finally Hapened!
           
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-            Alert
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-warning">
+            Trrrrouble!
             <span class="visually-hidden">Alert Message</span>
           </span>
         </a>
@@ -76,6 +76,32 @@
    </div>
  
 
+
+ 
+   <a name="alert"></a>
+   <div class="container">
+     <div class="row">
+       <div class="col p-1">
+         <div style="background-color: transparent;" class="card text-info border-warning mb-3">
+           <div class="card-body">
+             <p class="card-text small"><i class="bi bi-receipt align-text-bottom text-warning"></i>
+               
+      github pages are causing deployment failures. I guess their resource limiters and the 3.6 GB website size combined to increase github pages build failures.
+      And in the process of trying to re-build the website, their resource limitation system kicked in as the website tried to re-build too many times (do too many things).
+      I have pointed the website away from github, and onto the quickest backup website of all the ones I am testing.
+      You may see errors and delays, and other troubles in the next couple of days. But, I suspect the following backup links will work without any trouble:
+      <a href="https://catpea.vercel.app/">catpea.vercel.app</a>,
+      <a href="https://catpea.onrender.com/">catpea.onrender.com</a>,
+      <a href="https://catpea.pages.dev/">catpea.pages.dev</a>, and
+      the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a>.
+      
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
 
   <main class="container">
 
@@ -856,33 +882,7 @@ all pretenders can only hope to...</p>
 
 
 
-  
-    <a name="alert"></a>
-    <div class="container">
-      <div class="row">
-        <div class="col p-1">
-          <div style="background-color: transparent;" class="card text-info border-warning mb-3">
-            <div class="card-body">
-              <p class="card-text small"><i class="bi bi-receipt align-text-bottom text-warning"></i>
-                
-      Possible hosting disruptions/delays ahead, <a href="http://catpea.com">catpea.com</a> will always be the most reliable way to access the site.
-      The site is now at some 5.2GB (apparently, on my disk it only shows 2.6 GB), and <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k">github pages</a> fail to publish sometimes.
-      <a href="https://docs.github.com/en/github/managing-large-files/working-with-large-files/what-is-my-disk-quota">Github recommends 1GB websites with a 5GB hard limit</a>.
-      To resolve this issue I am now testing a series of hosting companies, both as a primary host, and a mirror host.
-      Here are the temporary addresses that I am using in my testing:
-      <a href="https://catpea.vercel.app/">catpea.vercel.app</a> (via Vercel),
-      <a href="https://catpea.onrender.com/">catpea.onrender.com</a> (via Render), and
-      <a href="https://catpea.pages.dev/">catpea.pages.dev</a> (via Cloudflare). I am basically just looking for failures/annoyances over time.
-      Please note that the <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">YouTube Channel</a> has thus far been a reliable source of most recent audio poetry: <a href="https://www.youtube.com/channel/UC6Og8hy_iEgZutvp0SQmNzQ">Cat Pea University on YouTube</a>.
-      (update: catpea.netlify.app via Netlify is no longer under consideration.)
-      
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
+
 
 
   
@@ -892,7 +892,9 @@ all pretenders can only hope to...</p>
           <small><i class="bi bi-info-circle-fill align-text-bottom"></i> Home Page shows a mix of all entries from all books, latest first.</small>
         </p>
         <p class="text-info">
-          <small><i class="bi bi-info-circle-fill align-text-bottom"></i> <span class="fw-light">Service or hosting interruptions will be resolved in under 24 hours.</span></small>
+          <small><i class="bi bi-info-circle-fill align-text-bottom"></i> <span class="fw-light">
+            <!-- Service or hosting interruptions will be resolved in under 24 hours. -->
+          </span></small>
         </p>
       </div>
     </div>
